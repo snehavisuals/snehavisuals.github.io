@@ -40,11 +40,13 @@ jobs:
             --exclude='.gitignore' \
             --exclude='README.md' \
             --exclude='beta/prd.md' \
+            --exclude='beta/prd-visuals.md' \
             ./ "$SITE_DIR/"
           test -f "$SITE_DIR/index.html"
           test -f "$SITE_DIR/beta/index.html"
           test -f "$SITE_DIR/CNAME"
           test ! -e "$SITE_DIR/beta/prd.md"
+          test ! -e "$SITE_DIR/beta/prd-visuals.md"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
