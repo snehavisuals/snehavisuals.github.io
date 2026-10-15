@@ -10,7 +10,7 @@ Live website:
 - `index.html` — homepage content and structure
 - `styles.css` — styling and layout
 - `beta/` — in-progress website preview, served at `/beta/` while the root page remains "Coming soon"
-- `beta/prd.md` and `beta/prd-visuals.md` — private product and visual-production briefs; excluded from the public Pages artifact
+- `beta/prd.md`, `beta/prd-visuals.md`, `beta/nanobanana-prompts.md`, and `beta/color-scheme.md` — private product, visual-production, prompt, and design-system guides; excluded from the public Pages artifact
 - `CNAME` — custom domain configuration for GitHub Pages
 
 ## Local preview
@@ -27,7 +27,7 @@ Then visit:
 The beta preview is not the production homepage. Until final release, `https://snehavisuals.com/` remains the "Coming soon" page and the preview is available at `https://snehavisuals.com/beta/`.
 
 ## Deployment
-This site uses the custom domain `snehavisuals.com`. The GitHub Actions workflow at `.github/workflows/pages.yml` publishes the root “Coming soon” page and the beta preview at `/beta/`, while excluding repository documentation and the private planning documents `beta/prd.md` and `beta/prd-visuals.md` from the published artifact. The root `CNAME` file is included in the artifact.
+This site uses the custom domain `snehavisuals.com`. The GitHub Actions workflow at `.github/workflows/pages.yml` publishes the root “Coming soon” page and the beta preview at `/beta/`, while excluding repository documentation and the private planning documents `beta/prd.md`, `beta/prd-visuals.md`, `beta/nanobanana-prompts.md`, and `beta/color-scheme.md` from the published artifact. The root `CNAME` file is included in the artifact.
 
 If GitHub Pages needs to be re-enabled:
 1. Push the repository to GitHub.

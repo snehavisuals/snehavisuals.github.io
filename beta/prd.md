@@ -19,13 +19,15 @@ The current public website is a “Coming soon” page. The repository is a smal
 
 - `beta/` is the working directory for the preview website. Put the preview site's `index.html`, styles, scripts, images, fonts, and other static assets in `beta/` or its subdirectories. This PRD is at `beta/prd.md`.
 - [`prd-visuals.md`](./prd-visuals.md) is the companion asset-production brief. Use its asset IDs and prompts when creating the still-image/illustration assets for the website.
+- [`nanobanana-prompts.md`](./nanobanana-prompts.md) contains copy-ready Google Nano Banana prompts for the planned still-image and illustration assets.
+- [`color-scheme.md`](./color-scheme.md) documents the current website palette, font roles, and content styling guidelines.
 - During development, serve the preview at `https://snehavisuals.com/beta/` (and ensure `/beta` redirects or resolves to `/beta/`). Keep the existing repository-root `index.html` as the public “Coming soon” landing page at `https://snehavisuals.com/`.
 - Mark the beta preview `noindex` while it is a staging experience. Remove that directive when the approved site is promoted to production and verify production indexing metadata.
-- A GitHub Actions Pages workflow publishes the repository root so `beta/index.html` is served under `/beta/`, while excluding both planning documents and repository-only documentation from the artifact. GitHub Pages must use "GitHub Actions" as its build/deployment source. Keep the root `CNAME` and custom domain unchanged during beta.
+- A GitHub Actions Pages workflow publishes the repository root so `beta/index.html` is served under `/beta/`, while excluding all planning documents and repository-only documentation from the artifact. GitHub Pages must use "GitHub Actions" as its build/deployment source. Keep the root `CNAME` and custom domain unchanged during beta.
 - Use root-relative URL paths carefully: assets and internal links must resolve correctly when pages are served under `/beta/`. Prefer paths relative to the beta page or a consistent `/beta/` base.
 - Do not publish the contents of `beta/` at the domain root during preview. The `beta/` directory is a staging preview, not the final production root.
 - At final release, explicitly promote the approved site to `https://snehavisuals.com/` and replace or supersede the root “Coming soon” page through the selected deployment process. Verify production routes, assets, HTTPS, and custom-domain behavior at that time.
-- Keep repository-level documentation and deployment configuration outside `beta/` when they are not part of the preview website. Keep `beta/prd.md` and `beta/prd-visuals.md` in the repository for planning, but exclude both from the public Pages artifact.
+- Keep repository-level documentation and deployment configuration outside `beta/` when they are not part of the preview website. Keep `beta/prd.md`, `beta/prd-visuals.md`, `beta/nanobanana-prompts.md`, and `beta/color-scheme.md` in the repository for planning, but exclude them from the public Pages artifact.
 
 ## 3. Goals and success measures
 

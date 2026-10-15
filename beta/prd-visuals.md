@@ -3,6 +3,7 @@
 **Status:** Ready for creative production  
 **Website:** `https://snehavisuals.com/beta/`  
 **Companion product brief:** [`prd.md`](./prd.md)  
+**Copy-ready generation prompts:** [`nanobanana-prompts.md`](./nanobanana-prompts.md)
 **Visual generation tool:** Google Nano Banana for still images and illustration concepts  
 **Audience and style target:** Contemporary, social-first Indian family celebrations (2026)
 
@@ -19,7 +20,9 @@ Google Nano Banana is requested for still-image and illustration creation. This 
 - **Feeling:** warm, candid, intimate, joyful, polished but not overproduced. Show people enjoying one another rather than performing for the camera.
 - **Subjects:** Indian families and guests across generations; contemporary, natural styling. Avoid caricature, stereotypes, tokenized cultural props, or assumptions about religion, region, clothing, and family structure.
 - **Photography style:** documentary event photography, natural window light or warm practical lights, genuine expressions, subtle editorial color, realistic skin tones, tasteful composition, and believable event details.
-- **Palette:** warm cream, muted coral, dusty rose, leafy sage, plum accents, and celebratory gold. Keep the image's color natural; brand colors belong in the website layout, not artificial color casts on skin.
+- **Website palette:** warm paper `#F8F5EF`, deeper paper `#F0EBE2`, ink `#24231F`, muted text `#757169`, line `#DDD7CD`, coral `#EF795D`, deeper coral `#D95F45`, plum `#57384A`, deep plum `#342330`, yellow `#F4D879`, and sage `#B9C5A6`. These values come from [`color-scheme.md`](./color-scheme.md); do not introduce dusty rose, generic gold, or extra brand colors as if they were approved tokens.
+- **How to apply color:** prioritize paper/cream, plum, and sage in neutral props, environments, and illustration backgrounds; use coral and yellow as small accents. Keep real or generated skin tones, flowers, food, and event decor believable. Do not color-grade every photograph coral/yellow or force every prop into the token palette.
+- **Typography in the site:** Playfair Display is the editorial/display face; DM Sans is the interface/body face. Do not render either font, or any other text, into generated images. Add headings, labels, captions, and UI with HTML/CSS after image approval.
 - **Social sensibility:** create useful vertical and portrait crops with a clear focal point, readable negative space, and thumbnail-safe composition. The page should feel current without relying on a short-lived trend, imitation app chrome, fake engagement counts, or platform logos.
 - **Consistency:** when a set should depict the same family or celebration, generate one approved reference/key image first and use it as a visual reference for related stills if the tool supports image references. Otherwise, describe subjects, wardrobe, venue, lighting, and palette consistently and select the closest matching outputs.
 - **Authenticity:** do not ask the image model to imitate a living photographer, named studio, copyrighted campaign, or supplied competitor. Do not present generated people as real clients.
@@ -29,12 +32,26 @@ Google Nano Banana is requested for still-image and illustration creation. This 
 Apply these instructions to every generation:
 
 1. Generate original visual artwork; do not recreate or imitate EventGraphia, Bangalore Photographers, another studio, a named artist, a recognizable campaign, or a real client's photograph.
-2. Ask for **no readable text, no lettering, no logos, no watermarks, no interface text, and no fake social-media UI** in the image. Add headlines, captions, labels, and graphic UI in HTML/CSS or a design tool afterward.
+2. Ask for **no readable text, no lettering, no logos, no watermarks, no interface text, and no fake social-media UI** in the image. Add Playfair Display/DM Sans typography, headlines, captions, labels, and graphic UI in HTML/CSS or a design tool afterward.
 3. Avoid malformed hands/fingers, duplicated people, distorted faces, unnatural skin, impossible camera equipment, visible brand marks, fake badges, and nonsensical signs.
 4. Keep the intended subject and key action inside the crop-safe area; do not place faces, hands, or important props at the edge.
 5. For identifiable-looking people, treat all generated people as fictional. Do not use their likeness as a named customer, photographer, or testimonial provider.
 6. Review every output for visual artifacts, accessibility/crop behavior, cultural fit, and misleading implications before publishing.
 7. Preserve an unmodified high-quality master. Make responsive/compressed web derivatives from the approved master; do not upscale a small derivative as the master.
+
+### Reusable color direction for prompts
+
+Use the exact palette from [`color-scheme.md`](./color-scheme.md). Add the relevant instruction below to each prompt rather than inventing a new palette for each asset:
+
+**For photographic prompts**
+
+> Keep the photograph editorial and natural, with realistic skin tones and true-to-life flowers, food, fabrics, and event decor. Let the Snehavisuals palette harmonize through the setting and a few subtle props only: paper cream `#F8F5EF` / `#F0EBE2`, restrained coral `#EF795D`, sage `#B9C5A6`, plum `#57384A`, and small yellow `#F4D879` accents. Ink `#24231F` and deep plum `#342330` are primarily for website typography and layout, not a color cast on the photograph. Do not tint skin, add a global coral/yellow filter, force every prop into the palette, or introduce dusty rose/generic gold as extra brand colors.
+
+**For illustration prompts**
+
+> Use only these Snehavisuals colors: paper `#F8F5EF`, deeper paper `#F0EBE2`, ink `#24231F`, muted `#757169`, line `#DDD7CD`, coral `#EF795D`, coral-deep `#D95F45`, plum `#57384A`, plum-dark `#342330`, yellow `#F4D879`, and sage `#B9C5A6`. Keep paper/cream backgrounds, ink outlines, and use coral, yellow, and sage as restrained accents. Do not add unlisted colors except where transparency or natural material texture is needed.
+
+**For type and overlays:** generate clean negative space where a web heading or caption will go; never render type in the image. Add Playfair Display for editorial headings and DM Sans for interface/caption text in the website or design tool after asset approval. Check the actual image crop and text contrast at both mobile and desktop sizes.
 
 ### Delivery conventions
 
@@ -87,7 +104,7 @@ These are starting prompts, not locked scripts. Run each in the requested aspect
 
 **Prompt:**
 
-> Create a simple, warm editorial vector-style illustration for an event photography brand: a generic smartphone with a clean calendar card, one highlighted event date, and a single confirmation check symbol. Cream, muted coral, dusty rose, sage, and plum palette; soft paper texture; friendly rounded geometry; generous negative space; centered square 1:1 composition; crisp edges suitable for responsive web display. Do not include words, letters, numerals, logos, brand names, realistic app UI, interface copy, shadows that reduce legibility, or a phone status bar.
+> Create a simple, warm editorial vector-style illustration for an event photography brand: a generic smartphone with a clean calendar card, one highlighted event date, and a single confirmation check symbol. Use only the Snehavisuals website palette: paper cream #F8F5EF and #F0EBE2, ink #24231F, coral #EF795D and #D95F45, plum #57384A, yellow #F4D879, and sage #B9C5A6. Make cream the main field, ink the device outline, and coral/yellow/sage small accents; use colors as flat illustration fills rather than a cast or gradient over people. Soft paper texture, friendly rounded geometry, generous negative space; centered square 1:1 composition; crisp edges suitable for responsive web display. Do not include words, letters, numerals, logos, brand names, realistic app UI, interface copy, shadows that reduce legibility, or a phone status bar.
 
 ### SV-03 — Printed photographs / keepsake delivery
 
@@ -95,7 +112,7 @@ These are starting prompts, not locked scripts. Run each in the requested aspect
 
 **Prompt:**
 
-> Original photorealistic editorial still life for a warm family photography studio: a neat, beautiful keepsake box partly open on a sunlit table, a few blank-backed printed family photographs tucked inside, soft cotton ribbon, one small dried flower nearby. Evoke careful delivery and treasured memories without showing a real brand or readable packaging. Natural warm daylight, tactile paper and linen, cream, muted coral and sage accents, understated premium styling. Landscape 4:3 composition, clear central subject with safe margins. No text, lettering, logos, watermarks, fake certification seals, or visible faces on prints.
+> Original photorealistic editorial still life for a warm family photography studio: a neat, beautiful keepsake box partly open on a sunlit table, a few blank-backed printed family photographs tucked inside, soft cotton ribbon, one small dried flower nearby. Evoke careful delivery and treasured memories without showing a real brand or readable packaging. Natural warm daylight, tactile paper and linen, cream `#F8F5EF` and `#F0EBE2` as the neutral base, with very small coral `#EF795D` or sage `#B9C5A6` prop accents. Keep print and material colors realistic; do not apply a coral/sage color cast. Understated premium styling. Landscape 4:3 composition, clear central subject with safe margins. No text, lettering, logos, watermarks, fake certification seals, or visible faces on prints.
 
 ### SV-04 — Occasion tile: children's / first birthday
 
@@ -107,7 +124,7 @@ These are starting prompts, not locked scripts. Run each in the requested aspect
 
 ### SV-06 — Occasion tile: housewarming / Griha Pravesh
 
-> Original photorealistic editorial event photograph of a family enjoying a new-home celebration: relatives smiling together in a bright, welcoming Indian home, a few tasteful flowers and personal belongings suggesting a new beginning. Keep the scene culturally neutral and do not depict a specific religious rite. Candid documentary photography, natural window light, warm cream, sage and soft coral tones, realistic people. Portrait 4:5 with clear central subjects. No text, readable house numbers, logos, watermark, or staged real-estate advertising look.
+> Original photorealistic editorial event photograph of a family enjoying a new-home celebration: relatives smiling together in a bright, welcoming Indian home, a few tasteful flowers and personal belongings suggesting a new beginning. Keep the scene culturally neutral and do not depict a specific religious rite. Candid documentary photography, natural window light, realistic people and skin tones; a cream `#F8F5EF` interior with subtle sage `#B9C5A6` and coral `#EF795D` details in decor only. Avoid a color cast. Portrait 4:5 with clear central subjects. No text, readable house numbers, logos, watermark, or staged real-estate advertising look.
 
 ### SV-07 — Occasion tile: anniversary / family gathering
 
@@ -211,13 +228,49 @@ Create a coordinated three-image set for one fictional family/event, with the sa
 
 **Story/carousel distinction:** SV-10–12 and SV-14–16 are deliverable examples only if production, editing, rights, pricing, and package inclusion are confirmed. The site should not claim a multi-frame Story sequence or carousel is included by default.
 
-## 7. Review checklist
+## 7. Production workflow and readiness tracker
+
+### Recommended workflow
+
+1. **Prepare:** choose an asset ID and review its intended page slot, ratio, prompt, and crop notes above.
+2. **Generate:** create a small candidate set in Google Nano Banana. Save the exact prompt, generation date, selected output, and any reference image used with the asset's working files.
+3. **Review:** reject outputs with visual artifacts, cultural mismatch, palette misuse, unwanted text, or a misleading resemblance to real client work.
+4. **Crop-test:** place the strongest candidate in its actual page slot, then check desktop and narrow mobile crops. Confirm faces and key action remain visible, overlays have negative space, and focal subjects are not cut off.
+5. **Approve:** record the selected final and status before exporting. If no candidate passes, revise the prompt and generate again rather than accepting a weak image.
+6. **Export and integrate:** create the web derivative, add accessible alt text (or mark as decorative), replace the mapped placeholder, and test loading/performance.
+7. **Release-check:** confirm the asset is in the public website artifact only if approved and intended for public use. Keep prompts, rejected candidates, reference files, and working masters out of the public artifact.
+
+For Story and carousel sets, approve the opening/cover image first, then review the complete sequence together for visual continuity, crop consistency, and a coherent beginning-to-end rhythm.
+
+### Asset readiness tracker
+
+Update this table as generation progresses. A group is ready only when every listed asset in the group has reached that status.
+
+| Asset ID(s) | Asset group | Status | Selected filename / notes |
+|---|---|---|---|
+| SV-01 | Home hero | Not started | |
+| SV-02 | Booking illustration (optional; CSS version may remain) | Optional / not started | |
+| SV-03 | Keepsake still life | Not started | |
+| SV-04–08 | Occasion tiles | Not started | |
+| SV-09 | Vertical short poster | Not started | Poster only; video is separate |
+| SV-10–12 | Story sequence stills | Not started | Keep one fictional event visually consistent |
+| SV-13 | YouTube highlight poster | Not started | Poster only; video is separate |
+| SV-14–16 | Social photo carousel | Not started | Keep one fictional event visually consistent |
+| SV-17–18 | Gallery photo-story tiles | Not started | Distinct from SV-01 where displayed together |
+| SV-19–20 | Gallery video posters | Not started | Posters only; videos are separate |
+| SV-21 | Quality-check / finished-memory image | Not started | No fake QA marks |
+
+Use these statuses consistently: **Not started → Generated → Reviewed → Approved → Added to site**. Use **Blocked** with a short reason when an asset cannot proceed. “Generated” does not mean approved for publication.
+
+## 8. Review checklist
 
 For each final export, verify:
 
 - Correct asset ID, filename, subject, orientation, and aspect ratio.
 - No generated text, fake branding, watermarks, malformed anatomy, or unwanted artifacts.
 - Faces, hands, cake/important event detail, and focal action remain visible in desktop and mobile crops.
+- The image has been checked in its actual website component at representative desktop and mobile widths, not only in a standalone preview.
+- Text overlays remain legible against the approved image crop and use the typography/color direction in [`color-scheme.md`](./color-scheme.md).
 - Any family/event set intended to be consistent has acceptable continuity between images.
 - Generated people and scenes are not presented as real clients or actual Snehavisuals work.
 - Any real portfolio image added later has permission for marketing use, with specific care and required guardian permission for identifiable minors.
@@ -225,7 +278,7 @@ For each final export, verify:
 - File dimensions, responsive crop, alt text, compression, and page performance are acceptable.
 - The live beta artifact excludes this brief and all non-website prompt/source files.
 
-## 8. Not generated by this brief
+## 9. Not generated by this brief
 
 - Actual event photography from Snehavisuals bookings.
 - Final moving video, reels, Stories with motion, or YouTube highlight films.
